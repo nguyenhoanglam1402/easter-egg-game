@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &8232792326021957954
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8437979229714986570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b040736da90200d469616062cbbd8ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_useBothHands: 0
+  m_preferredHand: 2
+  m_itemType: 3
+  m_dummyPoint: {fileID: 8437979229715343976}
+  m_itemAnimations: {fileID: 11400000, guid: 0e65e81061457af4b8571aab276b791e, type: 2}
+  m_accessoryLogic: {fileID: 0}
+  m_flipXForHand: 0
+  m_flipYForHand: 2
+  m_flipZForHand: 0
+--- !u!1001 &438619830837472886
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 8291112683584575548, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_Name
+      value: Money_pocketChange_2_WithItemLogic
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855692
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000008742278
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.000000014901163
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291112683584668700, guid: 098fcee2a3989ef488c03840748e40f8,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 098fcee2a3989ef488c03840748e40f8, type: 3}
+--- !u!1 &8437979229714986570 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8291112683584575548, guid: 098fcee2a3989ef488c03840748e40f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 438619830837472886}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &8437979229715343976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8291112683584668702, guid: 098fcee2a3989ef488c03840748e40f8,
+    type: 3}
+  m_PrefabInstance: {fileID: 438619830837472886}
+  m_PrefabAsset: {fileID: 0}

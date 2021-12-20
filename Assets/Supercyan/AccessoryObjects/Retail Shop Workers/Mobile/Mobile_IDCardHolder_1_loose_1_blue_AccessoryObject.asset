@@ -1,0 +1,16 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5945c72569b9f7b408b73dea863966b8, type: 3}
+  m_Name: Mobile_IDCardHolder_1_loose_1_blue_AccessoryObject
+  m_EditorClassIdentifier: 
+  m_prefab: {fileID: 7682430054763889424, guid: 1f7bf47d06cf9d2429f70b0a9b69ff90,
+    type: 3}

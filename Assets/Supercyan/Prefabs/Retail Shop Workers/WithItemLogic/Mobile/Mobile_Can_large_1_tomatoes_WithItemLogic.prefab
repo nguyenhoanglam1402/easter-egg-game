@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5495487422320200673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9100436917850100472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b040736da90200d469616062cbbd8ea4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_useBothHands: 0
+  m_preferredHand: 2
+  m_itemType: 3
+  m_dummyPoint: {fileID: 9100436917849804506}
+  m_itemAnimations: {fileID: 11400000, guid: 135689a3914023744986a121c744d4d5, type: 2}
+  m_accessoryLogic: {fileID: 0}
+  m_flipXForHand: 0
+  m_flipYForHand: 0
+  m_flipZForHand: 2
+--- !u!1001 &3141319125613479129
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6184297918562522657, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_Name
+      value: Mobile_Can_large_1_tomatoes_WithItemLogic
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.000000021855694
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.00000008742278
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 1.9106855e-15
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918562617857, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6184297918564518113, guid: 60c6ff9d1235a6947b64f335b3af180e,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 8ecd811ad2c949c41b06d39cdd06000b, type: 2}
+    m_RemovedComponents:
+    - {fileID: 5804258521462946017, guid: 60c6ff9d1235a6947b64f335b3af180e, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: 60c6ff9d1235a6947b64f335b3af180e, type: 3}
+--- !u!1 &9100436917850100472 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6184297918562522657, guid: 60c6ff9d1235a6947b64f335b3af180e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3141319125613479129}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &9100436917849804506 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6184297918562617859, guid: 60c6ff9d1235a6947b64f335b3af180e,
+    type: 3}
+  m_PrefabInstance: {fileID: 3141319125613479129}
+  m_PrefabAsset: {fileID: 0}
