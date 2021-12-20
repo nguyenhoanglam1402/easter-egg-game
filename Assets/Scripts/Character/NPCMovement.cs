@@ -43,16 +43,6 @@ public class NPCMovement : MonoBehaviour
 		{
             animator.SetFloat("MoveSpeed", 1f);
 		}
-        else
-		{
-            Debug.Log("I collected!");
-            
-            score += 1;
-            playerData.SetScore(score);
-            playerData.SetVectorState(this.transform.position);
-            webSocket.Send(JsonUtility.ToJson(playerData));
-            SetDestination();
-        }
 	}
 
 	private void ConnectToServer(string host)
@@ -70,14 +60,20 @@ public class NPCMovement : MonoBehaviour
 	{
 		if(other.tag == "Egg")
 		{
-            RefreshEggList();
+            Debug.Log("I collected!");
+            RefreshEggList(other);
+            score += 1;
+            playerData.SetScore(score);
+            playerData.SetVectorState(this.transform.position);
+            webSocket.Send(JsonUtility.ToJson(playerData));
+            SetDestination();
         }
 	}
 
-    private void RefreshEggList()
+    private void RefreshEggList(Collider other)
 	{
-        eggs.RemoveAt(targetIndex);
-        Destroy(eggs[targetIndex].gameObject);
+        eggs.Remove(other.gameObject);
+        Destroy(other.gameObject);
         Debug.Log("Refreshed!");
     }
 
