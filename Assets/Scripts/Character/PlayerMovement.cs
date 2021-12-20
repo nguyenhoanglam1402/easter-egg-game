@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using WebSocketSharp;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,13 +24,26 @@ public class PlayerMovement : MonoBehaviour
     private float radiusCheckSphere = 5f;
     [SerializeField]
     private LayerMask grounds;
+    [SerializeField]
+    private string name;
+    [SerializeField]
+    private string uid;
+    [SerializeField]
+    private int score = 0;
+
+    WebSocket webSocket;
+    DataPlayer dataPlayer;
+
     // Start is called before the first frame update
     void Start()
     {
+        ConnectToServer("ws://localhost:3000");
         animatorController = GetComponent<Animator>();
         characterController = GetComponent<CharacterController>();
         animatorController.SetBool("Grounded", true);
         mainCamera = GameObject.FindGameObjectWithTag("MainCamera").transform;
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     // Update is called once per frame
@@ -65,4 +79,23 @@ public class PlayerMovement : MonoBehaviour
         return Physics.CheckSphere(isGroundCheckSphereSensor.position, radiusCheckSphere, grounds);
     }
 
+	private void OnTriggerEnter(Collider other)
+	{
+		if(other.tag == "Egg")
+		{
+            Debug.Log("Player collected!");
+            Destroy(other.gameObject);
+            score += 1;
+            dataPlayer.SetScore(score);
+            dataPlayer.SetVectorState(this.transform.position);
+            webSocket.Send(JsonUtility.ToJson(dataPlayer));
+		}
+	}
+
+    private void ConnectToServer(string host)
+	{
+        dataPlayer = new DataPlayer(name, uid);
+        webSocket = new WebSocket(host);
+        webSocket.Connect();
+    }
 }

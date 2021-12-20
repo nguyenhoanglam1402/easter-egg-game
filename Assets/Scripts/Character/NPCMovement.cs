@@ -21,6 +21,7 @@ public class NPCMovement : MonoBehaviour
 
     WebSocket webSocket;
     DataPlayer playerData;
+    int targetIndex = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -41,9 +42,17 @@ public class NPCMovement : MonoBehaviour
 		if(navMeshAgent.remainingDistance > navMeshAgent.stoppingDistance)
 		{
             animator.SetFloat("MoveSpeed", 1f);
-            /*playerData.SetVectorState(this.transform.position);
-            webSocket.Send(JsonUtility.ToJson(playerData));*/
 		}
+        else
+		{
+            Debug.Log("I collected!");
+            
+            score += 1;
+            playerData.SetScore(score);
+            playerData.SetVectorState(this.transform.position);
+            webSocket.Send(JsonUtility.ToJson(playerData));
+            SetDestination();
+        }
 	}
 
 	private void ConnectToServer(string host)
@@ -61,27 +70,24 @@ public class NPCMovement : MonoBehaviour
 	{
 		if(other.tag == "Egg")
 		{
-            Debug.Log("I collected!");
-            RefreshEggList(other);
-            score += 1;
-            playerData.SetScore(score);
-            playerData.SetVectorState(this.transform.position);
-            webSocket.Send(JsonUtility.ToJson(playerData));
-            SetDestination();
-		}
+            RefreshEggList();
+        }
 	}
 
-    private void RefreshEggList(Collider other)
+    private void RefreshEggList()
 	{
-        eggs.Remove(other.gameObject);
-        Destroy(other.gameObject);
+        eggs.RemoveAt(targetIndex);
+        Destroy(eggs[targetIndex].gameObject);
         Debug.Log("Refreshed!");
     }
 
 	private void SetDestination()
 	{
-        int index = random.Next(0, eggs.Count);
-        Debug.Log(eggs.Count);
-        navMeshAgent.SetDestination(eggs[index].transform.position);
+        if(eggs.Count != 0)
+		{
+            targetIndex = random.Next(0, eggs.Count);
+            Debug.Log(eggs.Count);
+            navMeshAgent.SetDestination(eggs[targetIndex].transform.position);
+        }
     }
 }
